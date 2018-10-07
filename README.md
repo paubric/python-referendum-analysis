@@ -30,6 +30,8 @@ Masuratoare realizata prin raportul `numar total votanti impartit la numarul de 
 ![](https://github.com/paubric/python-referendum-analysis/blob/master/Suplimentare_crescator.png)
 ## Cel mai mare procentaj de voturi din alte surse decat listele permanente (Judet/UAT/Localitate/Nume)
 Masuratoare realizata prin scaderea din 100% a raportului `numar votanti pe liste permanente impartit la numar total votanti`
+## Histograma procentului de vot de pe altceva decat liste permanente
+![](https://github.com/paubric/python-referendum-analysis/blob/master/Suplimentare_distributie.png)
 ## Histograma numarului de alegatori inscrisi pe sectie in functie de mediu
 ![](https://github.com/paubric/python-referendum-analysis/blob/master/Inscrisi_mediu.png)
 ## Histograma prezentei la vot pe sectie in functie de mediu
