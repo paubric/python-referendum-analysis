@@ -49,7 +49,7 @@ print('[*] Creat fisier Prezenta_crescator.png')
 plt.clf()
 
 # Distributia prezentei la vot per judet
-plt.hist([mat_judete[i][4]*100 for i in range(len(mat_judete))], density=True, bins=30)
+plt.hist([mat_judete[i][4]*100 for i in range(len(mat_judete))], density=True, bins=20)
 mu, std = norm.fit([mat_judete[i][4]*100 for i in range(len(mat_judete))])
 plt.title('Distributia prezentei la vot per judet')
 xmin, xmax = plt.xlim()
