@@ -34,3 +34,19 @@ Masuratoare realizata prin scaderea din 100% a raportului `numar votanti pe list
 ![](https://github.com/paubric/python-referendum-analysis/blob/master/Inscrisi_mediu.png)
 ## Histograma prezentei la vot pe sectie in functie de mediu
 ![](https://github.com/paubric/python-referendum-analysis/blob/master/Prezenta_mediu.png)
+
+# Utilizare 
+- Instaleaza [Python](https://realpython.com/installing-python/)
+- Cloneaza acest repository
+- In interiorul clonei executa `python main.py`
+
+# Contribuie / TODO
+- Verifica corectitudinea rezultatelor
+- Verifica corectitudinea limbajului (legaleza)
+- Diacritice
+- Analiza metricilor *intre* cele 10 fisiere
+- Intreaba-te cand o sa mai scrii un README in romana
+
+# Disclaimer
+Nu raspund de utilizarea/interpretarea informatiilor rezultate din utilizarea programului.
+
