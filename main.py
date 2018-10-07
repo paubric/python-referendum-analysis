@@ -77,8 +77,8 @@ plt.savefig('Suplimentare_crescator.png')
 print('[*] Creat fisier Suplimentare_crescator.png')
 plt.clf()
 
-# Distributia numarului de alegatori inscrisi pe sectie in functie de mediu
-plt.title('Distributia numarului de alegatori inscrisi pe sectie in functie de mediu')
+# Histograma numarului de alegatori inscrisi pe sectie in functie de mediu
+plt.title('Histograma numarului de alegatori inscrisi pe sectie in functie de mediu')
 sectii_u = [i for i, x in enumerate(range(len(sectii))) if sectii[x]['Mediu'] == 'U']
 sectii_r = [i for i, x in enumerate(range(len(sectii))) if sectii[x]['Mediu'] == 'R']
 plt.hist([int(sectii[j]['Votanti lista']) for j in sectii_u], bins = 100,  label='Urban')
@@ -88,8 +88,8 @@ plt.savefig('Inscrisi_mediu.png')
 print('[*] Creat fisier Inscrisi_mediu.png')
 plt.clf()
 
-# Distributia prezentei la vot pe sectie in functie de mediu
-plt.title('Distributia prezentei la vot pe sectie in functie de mediu')
+# Histograma prezentei la vot pe sectie in functie de mediu
+plt.title('Histograma prezentei la vot pe sectie in functie de mediu')
 plt.hist([int(sectii[j]['LT'])/int(sectii[j]['Votanti lista']) for j in sectii_r], bins = 100,  label='Rural')
 plt.hist([int(sectii[j]['LT'])/int(sectii[j]['Votanti lista']) for j in sectii_u], bins = 100,  label='Urban')
 plt.legend(loc='upper right')
@@ -111,9 +111,9 @@ for i in range(len(top)):
 
 # Top sectii dupa procentul voturilor din alte surse decat listele permanente
 print('\n[*] Top sectii dupa procentul voturilor din alte surse decat listele permanente')
-top = [(sectie['Judet'], sectie['UAT'], sectie['Localitate'], sectie['Nume sectie de votare'], int(sectie['LT'])/int(sectie['Votanti lista']), int(sectie['LP'])/int(sectie['LT'])) for sectie in sorted(sectii, key=lambda x: int(x['LP'])/int(x['LT']))][:10]
+top = [(sectie['Judet'], sectie['UAT'], sectie['Localitate'], sectie['Nume sectie de votare'], int(sectie['LT'])/int(sectie['Votanti lista']), 1-(int(sectie['LP'])/int(sectie['LT']))) for sectie in sorted(sectii, key=lambda x: int(x['LP'])/int(x['LT']))][:10]
 for i in range(len(top)):
-    print(top[i][0],top[i][1],top[i][2],top[i][3],round(float(top[i][4])*100, 2),'din care de pe liste permanente:',round(float(top[i][5])*100, 2))
+    print(top[i][0],top[i][1],top[i][2],top[i][3],round(float(top[i][4])*100, 2),'din care de pe altceva decat liste permanente:',round(float(top[i][5])*100, 2))
 
 # Procent vot de pe liste permanente
 total = 0
