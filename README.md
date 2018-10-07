@@ -1,5 +1,17 @@
 # Analiza Votului de la Referendum
-Rezultatele au fost optinute pe baza fisierelor descarcate de la adresa [prezenta.bec.ro/referendum](prezenta.bec.ro/referendum). Exista 8 fisiere, cate 4 din cele doua zile, la orele 10, 13, 16 si 19. Fiecare fisier contine un tabel cu campurile: Judet	UAT	Localitate	Siruta	Nr sectie de votare	Nume sectie de votare	Mediu	Votanti lista	LP	LS	UM	LT.
+Rezultatele au fost optinute pe baza fisierelor descarcate de la adresa [prezenta.bec.ro/referendum](prezenta.bec.ro/referendum), care se gasesc si in acest repository. Exista 8 fisiere, cate 4 din cele doua zile, la orele 10, 13, 16 si 19. Fiecare fisier contine un tabel cu campurile: 
+-Judet
+-UAT
+-Localitate
+-Siruta
+-Nr sectie de votare
+-Nume sectie de votare
+-Mediu ('U'/'R' pentru Urban/Rural)
+-Votanti lista (Alegatori inscrisi pe liste permanente)
+-LP (Votanti pe liste permanente)
+-LS (Votanti pe liste suplimentare)
+-UM (Votanti cu urna mobile)
+-LT (Total votanti)
 
 
 ## Prezenta la vot per judet (alfabetic)
