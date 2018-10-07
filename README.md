@@ -1,5 +1,5 @@
 # Analiza Votului de la Referendum
-Rezultatele au fost optinute pe baza fisierelor descarcate de la adresa [prezenta.bec.ro/referendum](prezenta.bec.ro/referendum), care se gasesc si in acest repository. Exista 8 fisiere, cate 4 din cele doua zile, la orele 10, 13, 16 si 19. Fiecare fisier contine un tabel cu campurile: 
+Rezultatele au fost optinute pe baza fisierelor descarcate de la adresa [prezenta.bec.ro/referendum](prezenta.bec.ro/referendum), care se gasesc si in acest repository. Exista 10 fisiere, cate 5 din cele doua zile, la orele 10, 13, 16, 19 si 21. Fiecare fisier contine un tabel cu campurile: 
 - Judet
 - UAT
 - Localitate
