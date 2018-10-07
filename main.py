@@ -6,7 +6,7 @@ import warnings
 warnings.filterwarnings("ignore")
 
 sectii = []
-with open('presence_RO_2018-10-07_16-00.csv') as csvfile:
+with open('presence_RO_2018-10-07_19-00.csv') as csvfile:
     records = csv.DictReader(csvfile)
     for sectie in records:
          sectii.append(sectie)
@@ -61,12 +61,11 @@ plt.savefig('Prezenta_distributie.png')
 print('[*] Creat fisier Prezenta_distributie.png')
 plt.clf()
 
-# Proportia de vot nu de pe liste permanente per judet (alfabetic)
+# Proportia de vot de pe altceva decat liste permanente per judet (alfabetic)
 plt.title('Proportia de vot de pe altceva decat liste permanente per judet (alfabetic)')
 plt.bar([mat_judete[i][0] for i in range(len(mat_judete))], [(1-mat_judete_temp[i][1])*100 for i in range(len(mat_judete))])
 plt.savefig('Suplimentare_alfabetic.png')
 print('[*] Creat fisier Suplimentare_alfabetic.png')
-
 plt.clf()
 
 # Proportia de vot nu de pe liste permanente per judet (crescator)
@@ -75,6 +74,13 @@ plt.title('Proportia de vot de pe altceva decat liste permanente per judet (cres
 plt.bar([mat_judete_temp[i][0] for i in range(len(mat_judete_temp))], [(1-mat_judete_temp[i][1])*100 for i in range(len(mat_judete_temp))])
 plt.savefig('Suplimentare_crescator.png')
 print('[*] Creat fisier Suplimentare_crescator.png')
+plt.clf()
+
+# Histograma procentului de vot de pe altceva decat liste permanente
+plt.title('Histograma procentului de vot de pe altceva decat liste permanente')
+plt.hist([1 - (int(sectii[j]['LP'])/int(sectii[j]['LT'])) for j in range(len(sectii))], bins = 100)
+plt.savefig('Suplimentare_distributie.png')
+print('[*] Creat fisier Suplimentare_distributie.png')
 plt.clf()
 
 # Histograma numarului de alegatori inscrisi pe sectie in functie de mediu
@@ -121,4 +127,4 @@ total_permanent = 0
 for sectie in sectii:
     total_permanent += int(sectie['LP'])
     total += int(sectie['LT'])
-print('\n[*] Procent vot de pe liste permanente:', total_permanent/total*100)
+print('\n[*] Procent vot de pe altceva decat liste permanente:', (1-total_permanent/total)*100)
