@@ -11,8 +11,6 @@ with open('presence_RO_2018-10-07_19-00.csv') as csvfile:
     for sectie in records:
          sectii.append(sectie)
 
-print('[*] Numar sectii de vot: ', len(sectii))
-
 nume_judete = np.unique([sectii[i]['Judet'] for i in range(len(sectii))])
 print('[*] Numar de judete: ', len(nume_judete)) # Sanity check
 date_judete = dict((judet, np.zeros((9))) for judet in nume_judete)
@@ -78,7 +76,7 @@ plt.clf()
 
 # Histograma procentului de vot de pe altceva decat liste permanente
 plt.title('Histograma procentului de vot de pe altceva decat liste permanente')
-plt.hist([1 - (int(sectii[j]['LP'])/int(sectii[j]['LT'])) for j in range(len(sectii))], bins = 100)
+plt.hist([(1 - (int(sectii[j]['LP'])/int(sectii[j]['LT'])))*100 for j in range(len(sectii))], bins = 100)
 plt.savefig('Suplimentare_distributie.png')
 print('[*] Creat fisier Suplimentare_distributie.png')
 plt.clf()
@@ -96,8 +94,8 @@ plt.clf()
 
 # Histograma prezentei la vot pe sectie in functie de mediu
 plt.title('Histograma prezentei la vot pe sectie in functie de mediu')
-plt.hist([int(sectii[j]['LT'])/int(sectii[j]['Votanti lista']) for j in sectii_r], bins = 100,  label='Rural')
-plt.hist([int(sectii[j]['LT'])/int(sectii[j]['Votanti lista']) for j in sectii_u], bins = 100,  label='Urban')
+plt.hist([int(sectii[j]['LT'])/int(sectii[j]['Votanti lista'])*100 for j in sectii_r], bins = 100,  label='Rural')
+plt.hist([int(sectii[j]['LT'])/int(sectii[j]['Votanti lista'])*100 for j in sectii_u], bins = 100,  label='Urban')
 plt.legend(loc='upper right')
 plt.savefig('Prezenta_mediu.png')
 print('[*] Creat fisier Prezenta_mediu.png\n')
