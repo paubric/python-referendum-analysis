@@ -38,7 +38,7 @@ Masuratoare realizata prin scaderea din 100% a raportului `numar votanti pe list
 # Utilizare 
 - Instaleaza [Python](https://realpython.com/installing-python/)
 - Cloneaza acest repository
-- in interiorul clonei executa `python main.py'
+- In interiorul clonei executa `python main.py`
 
 # Contribuie / TODO
 - Verifica corectitudinea rezultatelor
@@ -46,4 +46,7 @@ Masuratoare realizata prin scaderea din 100% a raportului `numar votanti pe list
 - Diacritice
 - Analiza metricilor *intre* cele 10 fisiere
 - Intreaba-te cand o sa mai scrii un README in romana
+
+# Disclaimer
+Nu raspund de utilizarea/interpretarea informatiilor rezultate din utilizarea programului.
 
